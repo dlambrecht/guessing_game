@@ -1,10 +1,18 @@
 <script>
 	// Basic guessing game
+var correct='That\'s Right!'
+var wrong='Nope. Try Again.'
+
+var quiz = function () {
+
 var guess = prompt('How many states in the US have I been to?');
 	if (guess == 42) {
-		alert('That\s Right!');
-	}
-	else {
-		alert('Nope. Try Again.');
-	}
+		alert(correct);
+	} else {
+		alert(wrong);
+    quiz();
+}
+}
+
+quiz()
 </script>
