@@ -1,18 +1,23 @@
 <script>
-	// Basic guessing game
-var correct='That\'s Right!'
-var wrong='Nope. Try Again.'
+// Basic guessing game
 
-var quiz = function () {
+var quizGame = function (guess) {
+	
+	var guess = prompt('How many states in the US have I been to?');
+	
+	this.guess = guess;
 
-var guess = prompt('How many states in the US have I been to?');
-	if (guess == 42) {
-		alert(correct);
-	} else {
-		alert(wrong);
-    quiz();
+	this.checkAnswer = function(){
+		if (guess == 41) {
+			alert('That\'s Right!');
+		} else {
+			alert('Nope. Try Again.');
+		}
+	};
+
 }
-}
 
-quiz()
+var quizGame1 = new quizGame();
+quizGame1.checkAnswer();
+
 </script>
