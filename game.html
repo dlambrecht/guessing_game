@@ -1,10 +1,13 @@
 <script>
-	// Basic guessing game		
-var guess = prompt('How many states in the US have I been to?');
-  if (guess == 42) {
-	alert('That\s Right!');
+  // Basic guessing game
+  var getGuess = function() {		
+	return prompt('How many states in the US have I been to?');
   }
-  else {
+  
+  while (getGuess() != 42) {
 	alert('Nope. Try Again.');
   }
+  
+  alert('That\s Right!');
 </script>
+
