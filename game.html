@@ -1,23 +1,47 @@
-<script>
-// Basic guessing game
-
-var quizGame = function (guess) {
+<!doctype html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+	  <title>Darcy's Game</title>
 	
-	var guess = prompt('How many states in the US have I been to?');
+  </head>
+  <body>
+	  <h1>How Many States Have I Visited?</h1>
+	  <h2>Instructions</h2>
+		<p>To play this game you must enter a number to guess how
+			many states I have visited.</p>
+	<img src="map.png">
+	<footer>
+		<a href="http://m.maploco.com/visited-states" target="_blank">
+			How many states have <em>you</em> visited?</a>
+		<br>	
+		<a href="http://map1.maploco.com/visited-countries/" target="_blank">
+			What about other countries?</a>
+	</footer>	
+
+	
+  <script>
+	  
+  // guessing game that asks the user how many states I have been to
+
+  var quizGame = function (guess) {
+	
+	var guess = prompt('How many states have I visited?');
 	
 	this.guess = guess;
 
 	this.checkAnswer = function(){
-		if (guess == 41) {
-			alert('That\'s Right!');
+		if (guess == 40) {
+			alert('That is Correct!');
 		} else {
-			alert('Nope. Try Again.');
+			alert('Sorry, that is incorrect. The correct answer is 40');
 		}
 	};
 
-}
+  }
 var quizGame1 = new quizGame();
 quizGame1.checkAnswer();
 
-</script>
-
+  </script>
+  </body>
+</html>
