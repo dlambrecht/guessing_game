@@ -7,41 +7,26 @@
   </head>
   <body>
 	  <h1>How Many States Have I Visited?</h1>
-	  <h2>Instructions</h2>
-		<p>To play this game you must enter a number to guess how
-			many states I have visited.</p>
-	<img src="map.png">
-	<footer>
-		<a href="http://m.maploco.com/visited-states" target="_blank">
+    <img src="usa-map.png">
+    <p>Enter Guess:</p>
+    <input type="text" id="guess"/>
+    <button type="button" id="foo">Guess</button>
+    <h1 id="i-say"></h1>
+	  <h2>Instructions</h2> 
+      <p>Please enter a number</p>
+    
+   <!-- <h3>Hints</h3> -->
+   <!-- <ul id="hint-list"></ul> -->
+    <footer>
+      <a href="http://m.maploco.com/visited-states" target="_blank">
 			How many states have <em>you</em> visited?</a>
-		<br>	
-		<a href="http://map1.maploco.com/visited-countries/" target="_blank">
+      <br>	
+      <a href="http://map1.maploco.com/visited-countries/" target="_blank">
 			What about other countries?</a>
-	</footer>	
+    </footer>	
 
-	
-  <script>
-	  
-  // guessing game that asks the user how many states I have been to
-
-  var quizGame = function (guess) {
-	
-	var guess = prompt('How many states have I visited?');
-	
-	this.guess = guess;
-
-	this.checkAnswer = function(){
-		if (guess == 40) {
-			alert('That is Correct!');
-		} else {
-			alert('Sorry, that is incorrect. The correct answer is 40');
-		}
-	};
-
-  }
-var quizGame1 = new quizGame();
-quizGame1.checkAnswer();
-
-  </script>
+    <script src="js/game.js"></script>
+ 
   </body>
+  
 </html>
